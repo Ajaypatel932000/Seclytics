@@ -1,0 +1,409 @@
+
+.master-card{
+  display: flex;
+
+}
+.child-card{
+ /* flex-wrap: 0 0 100%; */
+
+ width: 538.5px;
+ height: 343px;
+ border-radius: 8px;
+ background-color: #FFFFFF;
+
+ margin: 12px;
+  /* w-[538.5px] h-[343px] rounded-[8px] bg-[#ffffff] top-[276px] left-[174px] m-[12px] */
+}
+
+.text-p1{
+    position: relative;
+    left: 11.56%;
+    right: 83.54%;
+    top: 15.9%;
+    bottom: 83.05%;
+   
+    font-family:Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #707070;
+
+}
+
+.number-p2{
+            position: relative;
+            left: 25%;
+            right: 69.95%;
+            top: 19.01%;
+            bottom: 76.38%;
+            
+            font-family:Helvetica;
+            font-style: normal;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 92px;
+            /* color: #707070; */
+            display: flex;
+            
+
+}
+
+.number-2{
+    position: relative;
+    left: 0;
+    right: 69.95%;
+    top: 19.01%;
+    bottom: 76.38%;
+    
+    font-family:Helvetica;
+    font-style: normal;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 92px;
+    color: #989898;
+    display: inline;
+
+    /* background: linear-gradient(0deg, #707070, #707070), */
+    /* linear-gradient(0deg, #989898, #989898); */
+
+}
+
+.card-1-text-3-bg{
+
+    position: relative;
+    width: 153px;
+    height: 36px;
+    left: 366px;
+    top: 480px;
+    text-align: center;
+    font-family:Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+   
+
+    border-radius: 18px;
+    background: #FFE4A4;
+
+}
+.card-1-text-3{
+
+    position: relative;
+    left: 30%;
+    right: 74.01%;
+    top: 18.42%;
+    bottom: 74.52%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family:Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #957014;
+    border-radius: 18px;
+    background: #FFE4A4;
+    
+
+
+}
+
+
+.card-1-text-4{
+
+
+    position: relative;
+    left: 26.71%;
+    right: 72.34%;
+    top: 27.93%;
+    bottom: 71.11%;   
+
+    font-family:Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #415BFF;
+
+}
+
+.card-custome-legend{
+    margin-left: -10%;
+    line-height:2em;
+}
+
+
+.card-dount-chart{
+    display: flex;
+    align-items: center;
+    margin-left: -10%;
+    margin-top: -5%
+}
+li.card-2-flex{
+
+   display: flex;
+   align-items: center;
+   font-size: 12px;
+   font-family: Helvetica;
+   color: #707070;
+
+}
+
+ul {
+    list-style: none !important;  
+  }
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  font-size: 40px;
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+
+li:nth-child(2):before {
+    color: #B71C1C !important;
+
+  }
+  
+  li:nth-child(4):before {
+    color: #F9A825 ;
+  }
+  
+  li:nth-child(6):before {
+    color:#AAAAAA;
+  }
+
+.nm-span{
+    
+   margin-left: -100%;
+   font-family: Helvetica;
+   font-size: 20px;  /*24PX*/
+   font-weight: 700;
+   color: #707070;
+
+  
+
+}
+
+.card-2-p{
+  display: flex;
+  font-family: Helvetica;
+font-size: 12px;
+font-weight: 300;
+color: #AAAAAA;
+margin-top: -22%;
+margin-left: 21%;
+}
+
+.card-3-p{
+  display: flex;
+  font-family: Helvetica;
+font-size: 12px;
+font-weight: 300;
+color: #AAAAAA;
+margin-top: 14%;
+margin-left: 12%;
+}
+
+
+.bar-chart{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 4%;
+  margin-top: 30%;
+}
+.table-master-card{
+  margin-top: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tr-card-1{
+  width: 49%; 
+  
+  height: 800px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+ 
+}
+
+.tr-card-2{
+  width: 49%; 
+  
+  height: 800px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+
+}
+
+.text-info-card-4-5{
+  margin-top: 10px;
+  margin-left:29px;
+  color:#707070;
+
+}
+
+hr.hr-card-1 {
+  border: 1px solid #C8C8C8;
+  width:90%;
+  margin: 0 auto;
+}
+
+.vl {
+  border-left: 1px solid #C8C8C8;
+  margin: 20%;
+  margin-top: 12%;
+    height: 50px;
+}
+
+.card4-master-table{
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
+  margin-top: 30px;
+    margin-left: 40px;
+  /* margin-left: -45%; */
+}
+
+.card-4-master-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 20%;
+}
+.card-4-box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-4-box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box-1-2-header{
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 100px;
+  white-space:nowrap;
+  
+}
+.text-box-1-2{
+  font-family: Helvetica;
+font-size: 40px;
+font-weight: 700;
+line-height: 46px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.text-below-dount-cart-4-5{
+
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 10px;
+  margin-left:29px;
+  color:#707070;
+
+}
+.card-4-5-box{
+  display: flex;
+  flex-direction: row; 
+  align-items: center;  
+}
+.text-below-dount-cart-4-5-2{
+  color: #415BFF;
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 10px;
+  margin-left:200px;
+
+
+}
+
+.card{
+  width: 250px;
+  height: 150px;
+  background-color:#FFFFFF;
+  margin-top: 10px;
+  margin-left: 18px;
+
+}
+.small-card{
+  display: flex;
+
+}
+/* EDEDED */
+.hr-line{
+  
+ border: 1px solid #EDEDED;
+ width: 90%;
+ margin: 0 auto;
+ margin-top: 40%;
+}
+
+.card-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: smaller;
+  font-family: Helvetica;
+  font-size: 10px;
+  /* margin-top: 2px; */
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+
+
+  
+}
+.card-footer-mg{
+  white-space:nowrap;
+
+
+}
+.card-footer-bg{
+  color: #DC3545;
+  background-color: #FFD2D2;
+  margin-left: 12%;
+  white-space: nowrap;
+}
+.card-footer-bg2{
+  background-color: #FFE4A4;
+  color: #957014;
+
+  margin-left: 12%;
+  white-space: nowrap;
+}
+
+.small-card-image-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+
+}
