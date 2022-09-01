@@ -8,13 +8,37 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import './example.css';
-import { useState, setState } from 'react';
-
+import { useState } from 'react';
+import axios from 'axios';
 import { Pie } from '@ant-design/plots';
 import Chart from 'react-apexcharts';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-// import HubSpot_Logo from '../../../../public/assets/images/dashboard_logo/HubSpot_Logo'
+import HubSpot_Logo from '../../../images/svg/HubSpot_Logo.svg';
+import Asana_logo from '../../../images/svg/Asana_logo.svg';
+import Slack_Technologies_Logo from '../../../images/svg/Slack_Technologies_Logo.svg';
+// import Google_Workspace_Logo from '../../../images/jpg/google_workspace.jpg';
+import Google_Workspace_Logo from '../../../images/svg/Google_Workspace_Logo.svg';
+import platforms_information from '../../../images/svg/platforms_information.svg';
+import usericon from '../../../images/svg/usericon.svg';
+import users_information from '../../../images/svg/users_information.svg';
+import github from '../../../images/svg/github.svg';
+
+function ExamplePage(props) {
+  const { t } = useTranslation('examplePage');
+  const [user, setUsers] = useState();
+  React.useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/todos/1').then((res) => {
+      setUsers(res.data);
+      console.log('users data :', user);
+    });
+  }, []);
+  return (
+    <div>
+      <BasicTabs />
+    </div>
+  );
+}
 
 const BarChart = () => {
   const [state, setState] = useState({
@@ -168,7 +192,7 @@ function a11yProps(index) {
     'aria-controls': `simple-tabpanel-${index}`,
   };
 }
-function BasicTabs() {
+function BasicTabs({ props }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -196,16 +220,6 @@ function BasicTabs() {
         Item Three
       </TabPanel>
     </Box>
-  );
-}
-
-function ExamplePage(props) {
-  const { t } = useTranslation('examplePage');
-
-  return (
-    <div>
-      <BasicTabs />
-    </div>
   );
 }
 
@@ -256,12 +270,15 @@ function ActionAreaCard() {
       </div>
       <div className='table-master-card'>
         <div className='tr-card-1'>
-          <div>
-            <span>Logo</span>
+          <div className='header-card'>
+            <span>
+              {' '}
+              <img src={platforms_information} width='20px' height='20px' />
+            </span>
             &nbsp;&nbsp;&nbsp;
             <span>Platforms Information</span>
           </div>
-          div1
+
           <hr className='hr-card-1' />
           <div className='text-info-card-4-5'>Platforms Needing Attention</div>
           {/* master div for chart and table */}
@@ -301,33 +318,27 @@ function ActionAreaCard() {
               <div className='card block rounded-lg shadow-lg bg-white max-w-sm text-center'>
                 <div className='small-card-image-flex'>
                   <div>
-                    <svg
-                      width='106'
-                      height='31'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <g fill='none'>
-                        <path
-                          d='M11.48 4.974v8.475H3.694V4.974H0v20.231h3.695v-8.2h7.784v8.2h3.696V4.974zm15.522 13.692a3.057 3.057 0 1 1-6.115 0V10h-3.505v8.666a6.556 6.556 0 0 0 13.112 0V10h-3.492v8.666zm25.971-7.773c0-1.777 1.175-2.34 2.462-2.34 1.038 0 2.408.79 3.305 1.748l2.295-2.706c-1.146-1.55-3.47-2.621-5.373-2.621-3.803 0-6.553 2.227-6.553 5.919 0 6.85 8.372 4.676 8.372 8.51 0 1.182-1.148 2.226-2.462 2.226-2.073 0-2.745-1.013-3.697-2.085l-2.548 2.649c1.63 2 3.64 3.016 6.047 3.016 3.613 0 6.519-2.254 6.519-5.778 0-7.604-8.373-5.241-8.373-8.538m51.8 11.08c-2.071 0-2.66-.896-2.66-2.268V13.63h3.22v-3.078h-3.22V6.491l-3.554 1.595V20.46c0 3.165 2.184 4.76 5.178 4.76.47.008.94-.03 1.402-.112l.867-3.192c-.391.027-.84.054-1.233.054M40.344 10.101c-1.736 0-2.948.504-4.12 1.653V5.095h-3.51v12.343c0 4.62 3.34 7.786 7.094 7.786 4.164 0 7.827-3.222 7.827-7.56 0-4.284-3.371-7.56-7.291-7.56m-.022 11.587a3.983 3.983 0 1 1 0-7.967 3.983 3.983 0 0 1 0 7.967m38.142-4.211c0-4.346-3.655-7.56-7.827-7.56-3.753 0-7.094 3.165-7.094 7.786v12.35h3.51v-6.668c1.17 1.147 2.384 1.653 4.118 1.653 3.92 0 7.292-3.276 7.292-7.561m-3.323-.044a3.983 3.983 0 1 1-7.967 0 3.983 3.983 0 0 1 7.967 0'
-                          fill='#33475B'
-                        />
-                        <path
-                          d='M89.806 9.75V6.223a2.716 2.716 0 0 0 1.566-2.448v-.081c0-1.5-1.216-2.716-2.716-2.716h-.081a2.716 2.716 0 0 0-2.716 2.716v.081a2.716 2.716 0 0 0 1.566 2.448V9.75a7.691 7.691 0 0 0-3.657 1.61l-9.673-7.534c.069-.249.105-.505.109-.762a3.06 3.06 0 1 0-3.064 3.054 3.027 3.027 0 0 0 1.507-.41l9.525 7.412a7.715 7.715 0 0 0 .118 8.69l-2.897 2.898a2.488 2.488 0 0 0-.724-.118 2.513 2.513 0 1 0 2.515 2.515 2.48 2.48 0 0 0-.118-.724l2.866-2.867A7.728 7.728 0 1 0 89.806 9.75m-1.188 11.6a3.965 3.965 0 1 1 0-7.927 3.965 3.965 0 0 1 .004 7.925'
-                          fill='#FF7A59'
-                        />
-                      </g>
-                    </svg>
+                    <img src={HubSpot_Logo} />
                   </div>
                   <div>HubSpot</div>
                 </div>
-                <hr className='hr-line mt-[-20px]' />
+                <hr className='hr-line' />
                 <div className='card-footer'>
-                  <span className='card-footer-mg ml-[-30px]'>CRM</span>
-                  <span className='card-footer-bg ml-[5px]'>High (5/10)</span>
+                  <span className='card-footer-mg '>CRM</span>
+                  <span className='card-footer-bg '>High (5/10)</span>
                 </div>
               </div>
               <div className='card block rounded-lg shadow-lg bg-white max-w-sm text-center'>
-                02
+                <div className='small-card-image-flex'>
+                  <div>
+                    <img
+                      src={Slack_Technologies_Logo}
+                      width='120px'
+                      height='110px'
+                    />
+                  </div>
+                  <div>Slack</div>
+                </div>
                 <hr className='hr-line' />
                 <div className='card-footer'>
                   <span className='card-footer-mg  ml-[-15px]'>
@@ -337,7 +348,12 @@ function ActionAreaCard() {
                 </div>
               </div>
               <div className='card block rounded-lg shadow-lg bg-white max-w-sm text-center'>
-                03
+                <div className='small-card-image-flex'>
+                  <div>
+                    <img src={Asana_logo} width='120px' height='140px' />
+                  </div>
+                  <div>asana</div>
+                </div>
                 <hr className='hr-line' />
                 <div className='card-footer'>
                   <span className='card-footer-mg ml-[-2px]'>
@@ -347,7 +363,16 @@ function ActionAreaCard() {
                 </div>
               </div>
               <div className='card block rounded-lg shadow-lg bg-white max-w-sm text-center'>
-                04
+                <div className='small-card-image-flex'>
+                  <div>
+                    <img
+                      src={Google_Workspace_Logo}
+                      height='170px'
+                      width='170px'
+                    />
+                  </div>
+                  <div>Google Workspace</div>
+                </div>
                 <hr className='hr-line' />
                 <div className='card-footer'>
                   <span className='card-footer-mg ml-[-15px]'>
@@ -357,7 +382,12 @@ function ActionAreaCard() {
                 </div>
               </div>
               <div className='card block rounded-lg shadow-lg bg-white max-w-sm text-center'>
-                05
+                <div className='small-card-image-flex'>
+                  <div>
+                    <img src={github} width='30px' height='50px' />
+                  </div>
+                  <div>Github</div>
+                </div>
                 <hr className='hr-line' />
                 <div className='card-footer'>
                   <span className='card-footer-mg ml-[-2px]'>
@@ -371,12 +401,13 @@ function ActionAreaCard() {
         </div>
 
         <div className='tr-card-2'>
-          <div>
-            <span>Logo</span>
+          <div className='header-card'>
+            <span>
+              <img src={users_information} width='20px' height='20px' />
+            </span>
             &nbsp;&nbsp;&nbsp;
             <span>Users Information</span>
           </div>
-          div2
           <hr className='hr-card-1' />
           <div className='text-info-card-4-5'>Users Needing Attention </div>
           {/* master div for chart and table */}

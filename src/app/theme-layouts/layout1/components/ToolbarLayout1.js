@@ -85,8 +85,8 @@ function ToolbarLayout1(props) {
             {/* notification hide on top bar
              <NotificationPanelToggleButton /> */}
 
-            {/* user profile hide
-             <UserMenu /> */}
+            {/* user profile hide */}
+             <UserMenu />
           </div>
 
           {config.navbar.display && config.navbar.position === 'right' && (
